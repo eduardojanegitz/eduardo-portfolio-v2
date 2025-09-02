@@ -8,9 +8,9 @@ import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Vitafor",
+    year: "2025",
+    title: "Vita Credenciamento",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -20,9 +20,9 @@ const portfolioProjects = [
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Evecoding",
+    year: "2023",
+    title: "Eventory",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
@@ -34,7 +34,7 @@ const portfolioProjects = [
   {
     company: "Quantum Dynamics",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Clone da Landing page do Iphone 15 ",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
