@@ -7,11 +7,56 @@ import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
-const portfolioProjects = [
+type Project = {
+  company: string;
+  year: string;
+  title: string;
+  results: { title: string }[];
+  link: string;
+  image: any;
+  tags?: string[];
+};
+
+const portfolioProjects: Project[] = [
   {
     company: "Vitafor",
     year: "2025",
     title: "Vita Credenciamento",
+    tags: [
+      "Fullstack",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    image: darkSaasLandingPage,
+  },
+  {
+    company: "Vitafor",
+    year: "2024",
+    title: "automação de requisições",
+    tags: ["Node.js", "TypeScript", "Playwright", "BullMQ", "Redis", "API"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    image: darkSaasLandingPage,
+  },
+  {
+    company: "Vitafor",
+    year: "2025",
+    title: "Monitoramento ecommerce",
+    tags: ["Next.js", "Node.js", "Cron", "Webhooks", "Observabilidade"],
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -24,6 +69,7 @@ const portfolioProjects = [
     company: "Evecoding",
     year: "2023",
     title: "Eventory",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "SEO"],
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
@@ -36,6 +82,72 @@ const portfolioProjects = [
     company: "Quantum Dynamics",
     year: "2023",
     title: "Clone da Landing page do Iphone 15 ",
+    tags: ["React", "Framer Motion", "Vite", "Animações"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "aerodev",
+    year: "2023",
+    title: "aerodev",
+    tags: ["Next.js", "React", "TypeScript"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "koothrappali",
+    year: "2024",
+    title: "koothrappali",
+    tags: ["React", "Node.js", "REST API"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "análise de curriculos",
+    year: "2025",
+    title: "análise de curriculos com IA",
+    tags: ["Next.js", "Node.js", "OpenAI API", "Pipelines", "Upload"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "Quantum Dynamics",
+    year: "2025",
+    title: "criação de alguma api",
+    tags: ["Node.js", "Fastify", "TypeScript", "Prisma", "PostgreSQL"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "validação de registro médico",
+    year: "2025",
+    title: "validação de registro médico",
+    tags: ["Next.js", "TypeScript", "Node.js", "Prisma", "Zod"],
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
@@ -48,7 +160,10 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section
+      id="projects"
+      className="pb-16 lg:py-24 scroll-mt-[72px] md:scroll-mt-[88px]"
+    >
       <div className="container">
         <SectionHeader
           eyebrow="Resultados do mundo real"
@@ -69,25 +184,50 @@ export const ProjectsSection = () => {
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
+
                   <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
                     {project.title}
                   </h3>
+
+                  {project.tags?.length ? (
+                    <div className="mt-3 flex flex-wrap gap-2 text-xs text-white/60">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-1 rounded-full border border-white/10 bg-white/5"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
-                      <li className="flex gap-2 text-sm md:text-base text-white/50">
+                      <li
+                        key={result.title}
+                        className="flex gap-2 text-sm md:text-base text-white/50"
+                      >
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       Veja o site ao vivo
                       <ArrowUpIcon className="size-4" />
                     </button>
                   </a>
                 </div>
+
                 <div className="relative">
                   <Image
                     src={project.image}
