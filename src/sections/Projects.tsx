@@ -118,6 +118,19 @@ const portfolioProjects: Project[] = [
     image: aiStartupLandingPage,
   },
   {
+    company: "Portfólio",
+    year: "2024",
+    title: "Primeira versão do meu portfólio",
+    tags: ["React", "Node.js", "REST API"],
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+  {
     company: "análise de curriculos",
     year: "2025",
     title: "análise de curriculos com IA",
