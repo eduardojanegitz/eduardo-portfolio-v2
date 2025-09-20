@@ -8,14 +8,15 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <div
+    <section
+      id="home"
       className="
         relative z-0 overflow-x-clip
         min-h-[100svh]
         py-14 md:py-48 lg:py-14
       "
     >
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -122,7 +123,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container relative z-10">
         <div
           className="
             mx-auto flex max-w-2xl flex-col items-center justify-center
@@ -210,6 +211,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
