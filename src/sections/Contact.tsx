@@ -1,9 +1,10 @@
+"use client";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactSection = () => {
   return (
-    <div className="py-16 pt-12 lg:py-24 lg:pt-20">
+    <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
         <div
           className="bg-gradient-to-r from-emerald-300 to-sky-400
@@ -26,8 +27,16 @@ export const ContactSection = () => {
             </div>
             <div>
               <button
-                className="text-white bg-gray-900 inline-flex 
-            items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-950"
+                onClick={() => {
+                  window.location.href =
+                    "mailto:edu0alves00@gmail.com?subject=" +
+                    encodeURIComponent("Contato pelo portfólio") +
+                    "&body=" +
+                    encodeURIComponent(
+                      "Olá, Eduardo! Gostaria de conversar sobre..."
+                    );
+                }}
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-950"
               >
                 <span className="font-semibold">Contate-me</span>
                 <ArrowUpRightIcon className="size-4" />
@@ -36,6 +45,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
