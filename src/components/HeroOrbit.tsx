@@ -5,24 +5,24 @@ export const HeroOrbit = ({
   children,
   size,
   rotation,
-  shouldOrbit = false,
-  shouldSpin,
-  orbitDuration,
-  spinDuration,
+  shouldorbit = false,
+  shouldspin = false,
+  orbitduration,
+  spinduration,
 }: PropsWithChildren<{
   size: number;
   rotation: number;
-  shouldOrbit?: boolean;
-  shouldSpin?: boolean;
-  spinDuration?: string;
-  orbitDuration?: string;
+  shouldorbit?: boolean;
+  shouldspin?: boolean;
+  spinduration?: string;
+  orbitduration?: string;
 }>) => {
   return (
     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20">
       <div
-        className={twMerge(shouldOrbit === true && "animate-spin")}
+        className={twMerge(shouldorbit === true && "animate-spin")}
         style={{
-          animationDuration: orbitDuration,
+          animationDuration: orbitduration,
         }}
       >
         <div
@@ -34,8 +34,8 @@ export const HeroOrbit = ({
           }}
         >
           <div
-            className={twMerge(shouldSpin === true && "animate-spin")}
-            style={{ animationDuration: spinDuration }}
+            className={twMerge(shouldspin === true && "animate-spin")}
+            style={{ animationDuration: spinduration }}
           >
             <div
               className="inline-flex"

@@ -1,6 +1,7 @@
+"use client";
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import bookImage from "@/assets/images/book-cover.png";
+import bookImage from "@/assets/images/arquitetura-limpa.jpg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import Image from "next/image";
@@ -12,6 +13,8 @@ import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const toolboxItems = [
   {
@@ -50,38 +53,46 @@ const hobbies = [
   {
     title: "Fotografia",
     emoji: "📷",
-    left: "50%",
-    top: "5%",
+    left: "5%",
+    top: "35%",
   },
   {
     title: "Academia",
     emoji: "🏋️‍♂️",
-    left: "10%",
+    left: "45%",
     top: "35%",
   },
   {
     title: "Jogos",
     emoji: "🎮",
-    left: "35%",
-    top: "40%",
+    left: "28%",
+    top: "5%",
+  },
+  {
+    title: "Fórmula 1",
+    emoji: "🏎️",
+    left: "50%",
+    top: "5%",
   },
 ];
 
 export const AboutSection = () => {
+  const contraintRef = useRef(null);
+
   return (
-    <div className="py-20 lg:py-28">
+    <section id="about-me" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="Sobre mim"
-          title="Um pouco do meu mundo"
-          description="Um pouco de quem eu sou, o que eu faço, e o que eu gosto de fazer"
+          title="Descubra meu mundo"
+          description="Aqui você encontra um pouco sobre quem eu sou, o que faço e as paixões que me movem"
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="Meus livros"
-                description="Veja os meus livros"
+                description="Explore as leituras que influenciam minha forma de pensar e trabalhar"
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="Book cover" />
@@ -89,40 +100,44 @@ export const AboutSection = () => {
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="Minhas toolbox"
-                description="Explore as tecnologias e ferramentas que uso para criar experiências digitais incríveis"
-                className=""
+                title="Ferramentas que me ajudam a criar"
+                description="Tecnologias e ferramentas que uso para transformar ideias em realidade"
               />
-              <ToolboxItems items={toolboxItems} className="" />
+              <ToolboxItems
+                items={toolboxItems}
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+              />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:15s]"
               />
             </Card>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="Além do código"
-                description="Explore meus hobbies por trás do código"
+                title="Meus interesses fora do código"
+                description="Conheça as atividades e hobbies que me ajudam a equilibrar minha vida pessoal e profissional"
                 className="px-6 py-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={contraintRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
                     }}
+                    drag
+                    dragConstraints={contraintRef}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -148,6 +163,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
