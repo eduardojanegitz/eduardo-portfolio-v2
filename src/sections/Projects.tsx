@@ -1,6 +1,8 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import iphoneImage from "@/assets/images/iphone.png";
+import koothrappaliImage from "@/assets/images/koothrappali.png";
+import aerodevImage from "@/assets/images/aerodev.png";
+import portfolioImage from "@/assets/images/portfolio.png";
+import evelandingPage from "@/assets/images/evelanding.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpIcon from "@/assets/icons/arrow-up-right.svg";
 import Image from "next/image";
@@ -18,157 +20,157 @@ type Project = {
 };
 
 const portfolioProjects: Project[] = [
-  {
-    company: "Vitafor",
-    year: "2025",
-    title: "Vita Credenciamento",
-    tags: [
-      "Fullstack",
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Vitafor",
-    year: "2024",
-    title: "automação de requisições",
-    tags: ["Node.js", "TypeScript", "Playwright", "BullMQ", "Redis", "API"],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Vitafor",
-    year: "2025",
-    title: "Monitoramento ecommerce",
-    tags: ["Next.js", "Node.js", "Cron", "Webhooks", "Observabilidade"],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
+  // {
+  //   company: "Vitafor",
+  //   year: "2025",
+  //   title: "Vita Credenciamento",
+  //   tags: [
+  //     "Fullstack",
+  //     "Next.js",
+  //     "React",
+  //     "TypeScript",
+  //     "Node.js",
+  //     "Prisma",
+  //     "PostgreSQL",
+  //   ],
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/4k7IdSLxh6w",
+  //   image: darkSaasLandingPage,
+  // },
+  // {
+  //   company: "Vitafor",
+  //   year: "2024",
+  //   title: "automação de requisições",
+  //   tags: ["Node.js", "TypeScript", "Playwright", "BullMQ", "Redis", "API"],
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/4k7IdSLxh6w",
+  //   image: darkSaasLandingPage,
+  // },
+  // {
+  //   company: "Vitafor",
+  //   year: "2025",
+  //   title: "Monitoramento ecommerce",
+  //   tags: ["Next.js", "Node.js", "Cron", "Webhooks", "Observabilidade"],
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/4k7IdSLxh6w",
+  //   image: darkSaasLandingPage,
+  // },
+  // {
+  //   company: "Evecoding",
+  //   year: "2023",
+  //   title: "Eventory",
+  //   tags: ["React", "MaterialUI", "Node.js", "Express", "MySQL"],
+  //   results: [
+  //     { title: "Boosted sales by 20%" },
+  //     { title: "Expanded customer reach by 35%" },
+  //     { title: "Increased brand awareness by 15%" },
+  //   ],
+  //   link: "https://eventory-teste.onrender.com",
+  //   image: eventoryImage,
+  // },
   {
     company: "Evecoding",
     year: "2023",
-    title: "Eventory",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind", "SEO"],
+    title: "Landing Page Eventory",
+    tags: ["React", "GSAP", "Styled Components"],
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Design responsivo para qualquer dispositivo" },
+      { title: "CTAs destacadas e objetivas" },
+      { title: "Experiência do usuário intuitiva e agradável" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://evelanding.vercel.app",
+    image: evelandingPage,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Apple",
     year: "2023",
-    title: "Clone da Landing page do Iphone 15 ",
-    tags: ["React", "Framer Motion", "Vite", "Animações"],
+    title: "Clone da Landing Page do Iphone 15",
+    tags: ["React", "Framer Motion", "Animações"],
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Implementação fiel ao design original" },
+      { title: "Animações fluidas com Framer Motion" },
+      { title: "UX envolvente e intuitiva" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://iphone-eta.vercel.app",
+    image: iphoneImage,
   },
   {
-    company: "aerodev",
+    company: "AERODEV.",
     year: "2023",
-    title: "aerodev",
-    tags: ["Next.js", "React", "TypeScript"],
+    title: "AERODEV.",
+    tags: ["React", "Three.js"],
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Experiência interativa com rolagem animada" },
+      { title: "Integração 3D fluida com Three.js" },
+      { title: "UX envolvente e intuitiva" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://aerodev.vercel.app",
+    image: aerodevImage,
   },
   {
-    company: "koothrappali",
+    company: "Snapgram",
     year: "2024",
-    title: "koothrappali",
-    tags: ["React", "Node.js", "REST API"],
+    title: "Koothrappali",
+    tags: ["React", "TailwindCSS", "Appwrite"],
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Design responsivo" },
+      { title: "Feed dinâmico com carregamento eficiente" },
+      { title: "Código limpo e bem estruturado" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://koothrappali.vercel.app",
+    image: koothrappaliImage,
   },
   {
     company: "Portfólio",
     year: "2024",
-    title: "Primeira versão do meu portfólio",
-    tags: ["React", "Node.js", "REST API"],
+    title: "Portfólio V1",
+    tags: ["React", "Framer Motion", "SCSS"],
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Layout profissional que valoriza os projetos" },
+      { title: "Apresentação da identidade visual" },
+      { title: "Performance otimizada" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://eduardo-alves-portfolio.vercel.app",
+    image: portfolioImage,
   },
-  {
-    company: "análise de curriculos",
-    year: "2025",
-    title: "análise de curriculos com IA",
-    tags: ["Next.js", "Node.js", "OpenAI API", "Pipelines", "Upload"],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
-    year: "2025",
-    title: "criação de alguma api",
-    tags: ["Node.js", "Fastify", "TypeScript", "Prisma", "PostgreSQL"],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
-  {
-    company: "validação de registro médico",
-    year: "2025",
-    title: "validação de registro médico",
-    tags: ["Next.js", "TypeScript", "Node.js", "Prisma", "Zod"],
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
+  // {
+  //   company: "análise de curriculos",
+  //   year: "2025",
+  //   title: "análise de curriculos com IA",
+  //   tags: ["Next.js", "Node.js", "OpenAI API", "Pipelines", "Upload"],
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/Z7I5uSRHMHg",
+  //   image: aiStartupLandingPage,
+  // },
+  // {
+  //   company: "Quantum Dynamics",
+  //   year: "2025",
+  //   title: "API de hábitos",
+  //   tags: ["Node.js", "Fastify", "TypeScript", "Prisma", "PostgreSQL"],
+  //   results: [
+  //     { title: "Enhanced user experience by 40%" },
+  //     { title: "Improved site speed by 50%" },
+  //     { title: "Increased mobile traffic by 35%" },
+  //   ],
+  //   link: "https://youtu.be/Z7I5uSRHMHg",
+  //   image: aiStartupLandingPage,
+  // },
 ];
 
 export const ProjectsSection = () => {
@@ -180,7 +182,7 @@ export const ProjectsSection = () => {
       <div className="container">
         <SectionHeader
           eyebrow="Resultados do mundo real"
-          title="Projetos Features"
+          title="Meus Projetos"
           description="Veja como eu transformei conceitos em uma experiência digital"
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
@@ -245,7 +247,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none border border-transparent rounded-xl"
                   />
                 </div>
               </div>
